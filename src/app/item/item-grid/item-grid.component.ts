@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Item} from '../../../../generated-sources/openapi';
 
 @Component({
@@ -9,11 +9,17 @@ import {Item} from '../../../../generated-sources/openapi';
 export class ItemGridComponent implements OnInit {
 
   @Input() items: Item[];
+  @Input() wowHeadBaseUrl: string;
   displayedColumns: string[] = ['slot', 'name', 'wowHeadId'];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  getTargetUrl(prefix: string, id: number) {
+    return this.wowHeadBaseUrl + '/' + prefix + '=' + id;
   }
 
 }
