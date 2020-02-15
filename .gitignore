@@ -49,3 +49,4 @@ Thumbs.db
 generated-sources/openapi/.gitignore
 generated-sources/openapi/git_push.sh
 generated-sources/openapi/.openapi-generator/**
+generated-sources/openapi/.openapi-generator-ignore
