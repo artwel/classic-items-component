@@ -2,7 +2,7 @@
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Item</th>
+    <th mat-header-cell *matHeaderCellDef>{{'items.columns.item' | translate}}</th>
     <td mat-cell *matCellDef="let element">
       <a [href]="getTargetUrl('item', element.wowHeadId)" target="_blank">{{element.name}}</a>
     </td>
@@ -10,13 +10,13 @@
 
   <!-- Slot Column -->
   <ng-container matColumnDef="slot">
-    <th mat-header-cell *matHeaderCellDef>Slot</th>
+    <th mat-header-cell *matHeaderCellDef>{{'items.columns.slot' | translate}}</th>
     <td mat-cell *matCellDef="let element">{{'items.slots.' + element.slot | translate}}</td>
   </ng-container>
 
   <!-- Own Column -->
   <ng-container matColumnDef="own">
-    <th mat-header-cell *matHeaderCellDef>Own</th>
+    <th mat-header-cell *matHeaderCellDef>{{'items.columns.own' | translate}}</th>
     <td mat-cell *matCellDef="let element">
       <mat-checkbox [checked]="element.own" (change)="onOwnClick(element.id, $event)"></mat-checkbox>
     </td>
