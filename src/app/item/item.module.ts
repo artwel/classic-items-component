@@ -4,6 +4,7 @@ import {MatTableModule} from '@angular/material/table';
 import {ItemComponent} from './item.component';
 import {ItemGridComponent} from './item-grid/item-grid.component';
 import {TranslationModule} from '../translate/translation.module';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import {TranslationModule} from '../translate/translation.module';
   ],
   imports: [
     CommonModule,
+    TranslationModule,
     MatTableModule,
-    TranslationModule
+    MatCheckboxModule
   ],
   exports: [
     ItemComponent,

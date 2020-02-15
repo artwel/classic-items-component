@@ -14,24 +14,27 @@ export class ItemComponent implements OnInit {
   wowHeadBaseUrl;
 
   constructor(private itemsService: ItemsService, private translateService: TranslateService) {
-    this.wowHeadBaseUrl = Config.urls.wowHead.replace('{:lang}', this.translateService.currentLang);
-    this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.wowHeadBaseUrl = Config.urls.wowHead.replace('{:lang}', event.lang);
-    });
+    this.setWowHeadLangParameter(this.translateService.currentLang);
+    this.translateService.onLangChange.subscribe((event: LangChangeEvent) => this.setWowHeadLangParameter(event.lang));
   }
 
   ngOnInit(): void {
     this.loadData();
   }
 
-  goToWowHead(prefix: string, id: number) {
-    window.open(`${this.wowHeadBaseUrl}/${prefix}=${id}`);
+  updateItem(target: any) {
+    console.log('update item', target);
+    this.itemsService.setOwn(target.id, target.own).subscribe();
   }
 
   private loadData() {
     this.itemsService.findItems().subscribe((items: Item[]) => {
       this.items = items;
     });
+  }
+
+  private setWowHeadLangParameter(lang: string) {
+    this.wowHeadBaseUrl = Config.urls.wowHead.replace(':lang', lang);
   }
 
 }

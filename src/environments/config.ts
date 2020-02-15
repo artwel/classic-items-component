@@ -1,5 +1,5 @@
 export const Config = {
   urls: {
-    wowHead: 'https://{:lang}.classic.wowhead.com/'
+    wowHead: 'https://:lang.classic.wowhead.com/'
   }
 };

@@ -12,8 +12,10 @@
 
 
 export interface Item { 
+    id?: number;
     slot?: string;
     name?: string;
     wowHeadId?: number;
+    own?: boolean;
 }
 

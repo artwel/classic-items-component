@@ -1,4 +1,5 @@
 <app-item-grid
   [items]="items"
-  [wowHeadBaseUrl]="wowHeadBaseUrl">
+  [wowHeadBaseUrl]="wowHeadBaseUrl"
+  (ownChange)="updateItem($event)">
 </app-item-grid>
