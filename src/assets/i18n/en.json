@@ -1,0 +1,10 @@
+{
+  "items": {
+    "slots": {
+      "HEAD": "Head",
+      "OFFHAND": "Offhand",
+      "WRIST": "Wrist",
+      "SHOULDERS": "Shoulders"
+    }
+  }
+}

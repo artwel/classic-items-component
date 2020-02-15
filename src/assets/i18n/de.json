@@ -1,0 +1,10 @@
+{
+  "items": {
+    "slots": {
+      "HEAD": "Kopf",
+      "OFFHAND": "Waffenhand",
+      "WRIST": "Handgelenke",
+      "SHOULDERS": "Schultern"
+    }
+  }
+}

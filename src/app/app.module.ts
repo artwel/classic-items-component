@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ItemModule} from './item/item.module';
+import {TranslationModule} from './translate/translation.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {ItemModule} from './item/item.module';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ItemModule
+    TranslationModule,
+    ItemModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

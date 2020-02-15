@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import {ItemComponent} from './item.component';
 import {ItemGridComponent} from './item-grid/item-grid.component';
+import {TranslationModule} from '../translate/translation.module';
 
 @NgModule({
   declarations: [
@@ -11,11 +12,11 @@ import {ItemGridComponent} from './item-grid/item-grid.component';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    TranslationModule
   ],
   exports: [
     ItemComponent,
-    ItemGridComponent
   ]
 })
 export class ItemModule {
