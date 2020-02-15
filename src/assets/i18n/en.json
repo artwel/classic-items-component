@@ -5,6 +5,11 @@
       "OFFHAND": "Offhand",
       "WRIST": "Wrist",
       "SHOULDERS": "Shoulders"
+    },
+    "columns" : {
+      "slot": "Slot",
+      "item": "Item",
+      "own": "Own"
     }
   }
 }

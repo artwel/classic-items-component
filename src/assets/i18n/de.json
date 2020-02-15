@@ -5,6 +5,11 @@
       "OFFHAND": "Waffenhand",
       "WRIST": "Handgelenke",
       "SHOULDERS": "Schultern"
+    },
+    "columns" : {
+      "slot": "Platz",
+      "item": "Gegenstand",
+      "own": "In Besitz"
     }
   }
 }
