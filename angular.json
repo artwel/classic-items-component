@@ -5,7 +5,11 @@
   "projects": {
     "classic-items-component": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "prefix": "app",
       "root": "",
       "sourceRoot": "src",
@@ -121,10 +125,5 @@
       }
     }
   },
-  "defaultProject": "classic-items-component",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "classic-items-component"
 }
