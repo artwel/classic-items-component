@@ -1,0 +1,15 @@
+<div class="d-flex">
+  <mat-form-field class="form-group mr-lg-4">
+    <mat-label>Slot</mat-label>
+    <mat-select [formControl]="slot()" multiple (selectionChange)="onFilterChange()">
+      <mat-option *ngFor="let slot of slots" [value]="slot">{{'items.slots.' + slot | translate }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="form-group">
+    <mat-label>Own</mat-label>
+    <mat-select [formControl]="own()" (selectionChange)="onFilterChange()">
+      <mat-option *ngFor="let own of owns" [value]="own.value">{{'items.owns.' + own.label | translate}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+

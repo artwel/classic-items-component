@@ -9,14 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { Slots } from './slots';
 
 
-export interface Item { 
-    id?: number;
-    slot?: Slots;
-    name?: string;
-    wowHeadId?: number;
-    own?: boolean;
-}
+export type Slots = 'HEAD' | 'OFFHAND' | 'WRIST' | 'SHOULDERS';
+
+export const Slots = {
+    HEAD: 'HEAD' as Slots,
+    OFFHAND: 'OFFHAND' as Slots,
+    WRIST: 'WRIST' as Slots,
+    SHOULDERS: 'SHOULDERS' as Slots
+};
 

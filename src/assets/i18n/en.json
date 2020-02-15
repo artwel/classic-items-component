@@ -10,6 +10,11 @@
       "slot": "Slot",
       "item": "Item",
       "own": "Own"
+    },
+    "owns": {
+      "all": "All",
+      "yes": "Yes",
+      "no": "No"
     }
   }
 }

@@ -1,14 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {Item, ItemsService} from '../../../generated-sources/openapi';
 import {Config} from '../../environments/config';
 import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
+import {ItemFilterComponent} from './item-filter/item-filter.component';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.scss']
 })
-export class ItemComponent implements OnInit {
+export class ItemComponent implements AfterViewInit {
+
+  @ViewChild(ItemFilterComponent) filter: ItemFilterComponent;
 
   items: Item[];
   wowHeadBaseUrl;
@@ -18,19 +21,19 @@ export class ItemComponent implements OnInit {
     this.translateService.onLangChange.subscribe((event: LangChangeEvent) => this.setWowHeadLangParameter(event.lang));
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.loadData();
   }
 
   updateItem(target: any) {
-    console.log('update item', target);
     this.itemsService.setOwn(target.id, target.own).subscribe();
   }
 
   private loadData() {
-    this.itemsService.findItems().subscribe((items: Item[]) => {
-      this.items = items;
-    });
+    this.itemsService.findItems(
+      this.filter.ownValue(),
+      this.filter.slotValue()
+    ).subscribe((items: Item[]) => this.items = items);
   }
 
   private setWowHeadLangParameter(lang: string) {

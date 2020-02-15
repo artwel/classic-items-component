@@ -10,6 +10,11 @@
       "slot": "Platz",
       "item": "Gegenstand",
       "own": "In Besitz"
+    },
+    "owns": {
+      "all": "Alle",
+      "yes": "Ja",
+      "no": "Nein"
     }
   }
 }

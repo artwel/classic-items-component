@@ -5,17 +5,23 @@ import {ItemComponent} from './item.component';
 import {ItemGridComponent} from './item-grid/item-grid.component';
 import {TranslationModule} from '../translate/translation.module';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ItemFilterComponent } from './item-filter/item-filter.component';
+import {MatSelectModule} from '@angular/material/select';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     ItemComponent,
     ItemGridComponent,
+    ItemFilterComponent,
   ],
   imports: [
     CommonModule,
     TranslationModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   exports: [
     ItemComponent,
