@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# generated code
+generated-sources/openapi/.gitignore
+generated-sources/openapi/.git_push.sh
+generated-sources/openapi/.openapi-generator/**
