@@ -36,12 +36,7 @@ export class ItemFilterComponent implements OnInit {
   }
 
   ownValue(): boolean {
-    const value = this.own().value;
-    if (value === 'all') {
-      return null;
-    } else {
-      return value === 'yes';
-    }
+    return this.own().value === 'all' ? null : this.own().value;
   }
 
   onFilterChange() {
