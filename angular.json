@@ -5,11 +5,8 @@
   "projects": {
     "classic-items-component": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
+      "schematics": {},
+      "prefix": "app",
       "root": "",
       "sourceRoot": "src",
       "architect": {
@@ -124,5 +121,10 @@
       }
     }
   },
-  "defaultProject": "classic-items-component"
+  "defaultProject": "classic-items-component",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
