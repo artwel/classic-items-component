@@ -47,5 +47,5 @@ Thumbs.db
 
 # generated code
 generated-sources/openapi/.gitignore
-generated-sources/openapi/.git_push.sh
+generated-sources/openapi/git_push.sh
 generated-sources/openapi/.openapi-generator/**
