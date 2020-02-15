@@ -8,6 +8,8 @@ import {Item, ItemsService} from '../../../generated-sources/openapi';
 })
 export class ItemComponent implements OnInit {
 
+  items: Item[];
+
   constructor(private itemsService: ItemsService) { }
 
   ngOnInit(): void {
@@ -16,7 +18,7 @@ export class ItemComponent implements OnInit {
 
   private loadData() {
     this.itemsService.findItems().subscribe((items: Item[]) => {
-      console.log(items);
+      this.items = items;
     });
   }
 
