@@ -29,7 +29,7 @@ export class ItemComponent implements AfterViewInit {
     this.itemsService.setOwn(target.id, target.own).subscribe();
   }
 
-  private loadData() {
+  loadData() {
     this.itemsService.findItems(
       this.filter.ownValue(),
       this.filter.slotValue()
