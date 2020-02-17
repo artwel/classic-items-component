@@ -2,13 +2,26 @@
   "items": {
     "slots": {
       "HEAD": "Kopf",
-      "OFFHAND": "Waffenhand",
+      "NECK": "Hals",
+      "SHOULDERS": "Schulter",
+      "BACK": "Rücken",
+      "CHEST": "Brust",
       "WRIST": "Handgelenke",
-      "SHOULDERS": "Schultern"
+      "LEGS": "Beine",
+      "HAND": "Hände",
+      "WAIST": "Taille",
+      "FEET": "Füße",
+      "RING": "Finger",
+      "TRINKET": "Schmuck",
+      "MAINHAND": "Waffenhand",
+      "OFFHAND": "Schildhand",
+      "WARD": "Zauberstab"
     },
     "columns" : {
       "slot": "Platz",
       "item": "Gegenstand",
+      "source": "Quelle",
+      "target": "Boss",
       "own": "In Besitz"
     },
     "owns": {

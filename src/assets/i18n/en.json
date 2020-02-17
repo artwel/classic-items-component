@@ -2,13 +2,26 @@
   "items": {
     "slots": {
       "HEAD": "Head",
-      "OFFHAND": "Offhand",
-      "WRIST": "Wrist",
-      "SHOULDERS": "Shoulders"
+      "NECK": "Neck",
+      "SHOULDERS": "Shoulders",
+      "BACK": "Back",
+      "CHEST": "Chest",
+      "WRIST": "Wrists",
+      "LEGS": "Legs",
+      "HAND": "Hands",
+      "WAIST": "Waist",
+      "FEET": "Feet",
+      "RING": "Ring",
+      "TRINKET": "Trinket",
+      "MAINHAND": "Main-Hand",
+      "OFFHAND": "Off-Hand",
+      "WARD": "Ward"
     },
     "columns" : {
       "slot": "Slot",
       "item": "Item",
+      "source": "Source",
+      "target": "Boss",
       "own": "Own"
     },
     "owns": {
