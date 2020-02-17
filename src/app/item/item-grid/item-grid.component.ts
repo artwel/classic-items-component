@@ -13,7 +13,7 @@ export class ItemGridComponent implements OnInit {
   @Input() wowHeadBaseUrl: string;
   @Output() ownChange: EventEmitter<any> = new EventEmitter<any>();
 
-  displayedColumns: string[] = ['slot', 'name', 'own'];
+  displayedColumns: string[] = ['slot', 'name', 'source', 'target', 'own'];
 
   constructor() {
   }
@@ -25,8 +25,31 @@ export class ItemGridComponent implements OnInit {
     this.ownChange.emit({id, own: event.checked});
   }
 
-  getTargetUrl(prefix: string, id: number) {
-    return this.wowHeadBaseUrl + '/' + prefix + '=' + id;
+  getTargetUrl(type: string, id: number) {
+    return this.wowHeadBaseUrl + '/' + this.getPrefixByType(type) + '=' + id;
+  }
+
+  private getPrefixByType(type): string {
+    let result;
+    switch (type) {
+      case 'DUNGEON':
+      case 'WORLDBOSS':
+        result = 'npc';
+        break;
+      case 'item':
+      case 'PROFESSION':
+        result = 'item';
+        break;
+      case 'QUEST':
+        result = 'quest';
+        break;
+      case 'CONTAINER':
+        result = 'object';
+        break;
+      default:
+        result = null;
+    }
+    return result;
   }
 
 }
