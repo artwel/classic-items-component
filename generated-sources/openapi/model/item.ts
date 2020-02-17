@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { Slots } from './slots';
+import { Source } from './source';
 
 
 export interface Item { 
@@ -17,6 +18,7 @@ export interface Item {
     slot?: Slots;
     name?: string;
     wowHeadId?: number;
+    source?: Source;
     own?: boolean;
 }
 

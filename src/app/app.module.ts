@@ -6,6 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ItemModule} from './item/item.module';
 import {TranslationModule} from './translate/translation.module';
+import {BASE_PATH} from '../../generated-sources/openapi';
+import {Config} from '../environments/config';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {TranslationModule} from './translate/translation.module';
     TranslationModule,
     ItemModule,
   ],
-  providers: [],
+  providers: [
+    {provide: BASE_PATH, useValue: Config.urls.backend}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

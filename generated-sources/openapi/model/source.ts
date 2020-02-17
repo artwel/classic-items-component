@@ -12,8 +12,9 @@
 
 
 export interface Source { 
-    dungeon?: string;
-    boss?: string;
+    type?: string;
+    location?: string;
+    target?: string;
     wowHeadId?: number;
 }
 

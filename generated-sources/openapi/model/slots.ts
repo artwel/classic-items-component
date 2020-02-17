@@ -11,12 +11,23 @@
  */
 
 
-export type Slots = 'HEAD' | 'OFFHAND' | 'WRIST' | 'SHOULDERS';
+export type Slots = 'HEAD' | 'NECK' | 'SHOULDERS' | 'BACK' | 'CHEST' | 'WRIST' | 'LEGS' | 'HAND' | 'WAIST' | 'FEET' | 'RING' | 'TRINKET' | 'MAINHAND' | 'OFFHAND' | 'WARD]';
 
 export const Slots = {
     HEAD: 'HEAD' as Slots,
-    OFFHAND: 'OFFHAND' as Slots,
+    NECK: 'NECK' as Slots,
+    SHOULDERS: 'SHOULDERS' as Slots,
+    BACK: 'BACK' as Slots,
+    CHEST: 'CHEST' as Slots,
     WRIST: 'WRIST' as Slots,
-    SHOULDERS: 'SHOULDERS' as Slots
+    LEGS: 'LEGS' as Slots,
+    HAND: 'HAND' as Slots,
+    WAIST: 'WAIST' as Slots,
+    FEET: 'FEET' as Slots,
+    RING: 'RING' as Slots,
+    TRINKET: 'TRINKET' as Slots,
+    MAINHAND: 'MAINHAND' as Slots,
+    OFFHAND: 'OFFHAND' as Slots,
+    WARD: 'WARD]' as Slots
 };
 
