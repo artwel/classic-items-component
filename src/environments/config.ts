@@ -1,5 +1,6 @@
 export const Config = {
   urls: {
-    wowHead: 'https://:lang.classic.wowhead.com/'
+    backend: 'http://localhost:8080',
+    wowHead: 'https://:lang.classic.wowhead.com'
   }
 };
